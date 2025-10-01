@@ -20,7 +20,7 @@ const projects = [
   {
     title: "TaskBoard - Task Management Site",
     description:
-      "A web-based task management platform for creating, organizing, and tracking tasks with a clean interface and responsive design.",
+      "A web-based task management platform for creating, organizing, and tracking tasks with a clean interface.",
     tools: ["React", "TailwindCSS", "Node.js", "MongoDB"],
     github: "https://github.com/acunetix2/taskboard",
     demo: "https://activa-blond.vercel.app", // replace with real demo if available

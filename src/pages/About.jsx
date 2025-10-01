@@ -4,7 +4,7 @@ import { FileDown } from "lucide-react";
 
 function About() {
   return (
-    <section className="px-6 py-12 max-w-5xl mx-auto">
+    <section className="px-6 py-12 max-w-5xl mx-auto bg-gradient-to-b from-gray-900 via-blue-900 to-gray-800">
       <SectionHeading title="About Me" />
 
       <div className="bg-gray-900 border border-gray-800 rounded-xl shadow-lg p-8 mt-8 
@@ -21,7 +21,7 @@ function About() {
         </p>
 
         <p className="text-gray-300 leading-relaxed mb-6">
-          My tech journey began with curiosity — breaking down how networks 
+          My tech journey began with curiosity breaking down how networks 
           communicate, why security vulnerabilities exist, and how systems can 
           be made stronger. Since then, I’ve been learning, experimenting, and 
           building projects that combine practical knowledge with real-world 

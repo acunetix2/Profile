@@ -4,10 +4,9 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 function Contact() {
   return (
-    <section className="px-6 py-12 max-w-4xl mx-auto text-center">
+    <section className="px-6 py-12 max-w-4xl mx-auto bg-gradient-to-b from-gray-900 via-blue-900 to-gray-800 text-center">
       {/* Heading */}
       <SectionHeading title="Contact Me" />
-
       {/* Contact Form */}
       <ContactForm />
 

@@ -13,6 +13,9 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { FolderClock } from "lucide-react";
+import { FaBlog, FaBlogger } from "react-icons/fa";
+import { FaBahtSign } from "react-icons/fa6";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -22,8 +25,9 @@ const Sidebar = () => {
     { id: "/", label: "Home", icon: <Home size={18} /> },
     { id: "/about", label: "About", icon: <User size={18} /> },
     { id: "/portfolio", label: "Projects", icon: <FolderKanban size={18} /> },
-    { id: "/experience", label: "Experience", icon: <Briefcase size={18} /> },
-    { id: "/skills", label: "Skills", icon: <PenTool size={18} /> },
+    { id: "/experience", label: "Experience & Education", icon: <Briefcase size={18} /> },
+    { id: "/skills", label: "Skills & Tools", icon: <PenTool size={18} /> },
+    { id: "/blog", label: "Blog & Articles", icon: <FaBlogger size={18} />},
     { id: "/contact", label: "Contact", icon: <Mail size={18} /> },
   ];
 
@@ -59,8 +63,8 @@ const Sidebar = () => {
           >
             {/* Logo / Name (desktop only) */}
             <div className="hidden md:block p-6 border-b border-gray-800">
-              <h1 className="text-xl font-bold text-white">Iddy Chesire</h1>
-              <p className="text-sm text-gray-400">Cybersecurity Analyst</p>
+              <h1 className="text-l font-bold text-sm text-blue-400 via-green-300 to-white">Develop, Secure, Maintain</h1>
+              
             </div>
 
             {/* Navigation */}
@@ -91,8 +95,8 @@ const Sidebar = () => {
             </nav>
 
             {/* Footer */}
-            <div className="p-4 text-xs text-gray-500 text-center border-t border-gray-800">
-              © {new Date().getFullYear()} Iddy Chesire
+            <div className="p-4 text-xs text-gray-500 text-center text-bold border-t border-gray-800">
+              &copy; {new Date().getFullYear()} Iddy Chesire
             </div>
           </motion.aside>
         )}

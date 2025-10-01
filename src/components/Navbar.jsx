@@ -8,7 +8,7 @@ function Navbar({ toggleSidebar }) {
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 15 }}
-      className="fixed top-0 left-0 md:left-56 right-0 h-14 bg-[#0f172a]/95 backdrop-blur-md 
+      className="fixed top-0 left-0 md:left-56 right-0 h-20 bg-[#0f172a]/95 backdrop-blur-md 
                  flex items-center justify-between px-6 shadow-lg z-40"
     >
       {/* Left: Hamburger (mobile only) */}
@@ -16,7 +16,7 @@ function Navbar({ toggleSidebar }) {
         whileTap={{ scale: 0.85 }}
         whileHover={{ scale: 1.1 }}
         onClick={toggleSidebar}
-        className="p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 transition md:hidden"
+        className="p-4 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 transition md:hidden"
       >
         <Menu size={24} />
       </motion.button>

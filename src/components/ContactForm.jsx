@@ -41,12 +41,12 @@ const ContactForm = () => {
   return (
     <Card className="max-w-xl mx-auto p-6 shadow-lg rounded-2xl">
       <CardHeader>
-        <CardTitle className="text-2xl font-semibold text-center">
-          Get in Touch
+        <CardTitle className="text-2xl font-semibold text-green-600 text-center">
+          Reach me out
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-blue-400">
           <Input
             type="text"
             name="name"

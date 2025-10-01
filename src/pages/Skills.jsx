@@ -15,7 +15,7 @@ function Skills() {
           <h3
             className={`${
               category === "tools" ? "text-2xl mb-8" : "text-xl mb-6"
-            } font-bold text-gray-100 border-b border-gray-700 pb-2`}
+            } font-bold text-green-100 border-b border-gray-700 pb-2`}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </h3>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import  profile  from "@/assets/profile.jpg";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 function Home() {
@@ -8,7 +9,7 @@ function Home() {
                         bg-gradient-to-b from-gray-900 via-blue-900 to-gray-800">
       {/* Profile Image */}
       <img
-        src="/profile.jpg"
+        src={profile}
         alt="Iddy Chesire"
         className="w-40 h-40 rounded-full shadow-2xl mb-6 border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
       />

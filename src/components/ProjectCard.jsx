@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="w-full sm:w-[40%] md:w-[48%] lg:w-[95%]" // responsive sizing
+      className="w-full sm:w-[40%] md:w-[48%] lg:w-[97%]" // responsive sizing
     >
       <Card className="bg-[#0f172a] border border-gray-800 rounded-lg shadow-md hover:shadow-indigo-500/40 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 transform relative overflow-hidden group">
         
