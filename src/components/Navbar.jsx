@@ -26,7 +26,7 @@ function Navbar({ toggleSidebar }) {
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.2, type: "spring", stiffness: 80 }}
-        className="text-lg md:text-xl font-extrabold tracking-wide text-orange-500"
+        className="text-lg md:text-xl font-extrabold tracking-wide text-blue-400"
       >
         Iddy Chesire
       </motion.h1>

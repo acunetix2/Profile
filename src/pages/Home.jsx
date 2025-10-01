@@ -4,40 +4,45 @@ import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 function Home() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-[90vh] text-center px-6">
+    <section className="flex flex-col items-center justify-center min-h-[90vh] text-center px-6 
+                        bg-gradient-to-b from-gray-900 via-blue-900 to-gray-800">
       {/* Profile Image */}
       <img
         src="/profile.jpg"
         alt="Iddy Chesire"
-        className="w-40 h-40 rounded-full shadow-lg mb-6 border-4 border-orange-500"
+        className="w-40 h-40 rounded-full shadow-2xl mb-6 border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
       />
 
       {/* Name */}
-      <h1 className="text-4xl font-bold mb-2">Iddy Kibor Chesire</h1>
+      <h1 className="text-4xl md:text-5xl font-bold mb-2 text-white">Iddy Kibor Chesire</h1>
 
       {/* Title */}
-      <h2 className="text-xl text-orange-500 mb-4">
+      <h2 className="text-xl md:text-2xl text-blue-400 mb-4 font-medium">
         Cybersecurity Analyst | Network Admin (Jr) | Web Developer
       </h2>
 
       {/* About */}
-      <p className="max-w-2xl text-gray-600 dark:text-gray-300 mb-6">
-        I’m a passionate Cybersecurity Analyst and Junior Network Administrator with 
-        hands-on experience in protecting digital infrastructure, detecting vulnerabilities, 
-        and ensuring secure communication. I also build and maintain web applications, 
-        combining technical networking expertise with full-stack development skills.
+      <p className="max-w-2xl text-gray-300 mb-6 leading-relaxed">
+        I’m a passionate Cybersecurity Analyst and Junior Network Administrator with hands-on 
+        experience in protecting digital infrastructure, detecting vulnerabilities, and ensuring 
+        secure communication. I also build and maintain web applications, combining technical 
+        networking expertise with full-stack development skills.
       </p>
 
       {/* Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-8">
         <Link to="/portfolio">
-          <Button variant="default">View My Work</Button>
+          <Button variant="default" className="hover:scale-105 transition-transform duration-300">
+            View My Work
+          </Button>
         </Link>
         <a href="/resume.pdf" download>
-          <Button variant="outline">Download Resume</Button>
+          <Button variant="outline" className="hover:scale-105 transition-transform duration-300">
+            Download Resume
+          </Button>
         </a>
         <Link to="/contact">
-          <Button className="bg-orange-500 text-white hover:bg-orange-600">
+          <Button className="bg-blue-500 text-white hover:bg-blue-600 hover:scale-105 transition-all duration-300">
             Let’s Connect
           </Button>
         </Link>
@@ -45,36 +50,23 @@ function Home() {
 
       {/* Social Media */}
       <div className="flex space-x-5 mt-4">
-        <a
-          href="https://github.com/acunetix2"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-3 rounded-full bg-gray-800 text-gray-300 hover:bg-orange-500 hover:text-white transform hover:scale-110 transition-all duration-300"
-        >
-          <Github size={22} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/iddy-k-chesire-55009b264/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-3 rounded-full bg-gray-800 text-gray-300 hover:bg-orange-500 hover:text-white transform hover:scale-110 transition-all duration-300"
-        >
-          <Linkedin size={22} />
-        </a>
-        <a
-          href="https://twitter.com/your-handle"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-3 rounded-full bg-gray-800 text-gray-300 hover:bg-orange-500 hover:text-white transform hover:scale-110 transition-all duration-300"
-        >
-          <Twitter size={22} />
-        </a>
-        <a
-          href="mailto:iddychesire098@gmail.com"
-          className="p-3 rounded-full bg-gray-800 text-gray-300 hover:bg-orange-500 hover:text-white transform hover:scale-110 transition-all duration-300"
-        >
-          <Mail size={22} />
-        </a>
+        {[
+          { icon: <Github size={22} />, link: "https://github.com/acunetix2" },
+          { icon: <Linkedin size={22} />, link: "https://www.linkedin.com/in/iddy-k-chesire-55009b264/" },
+          { icon: <Twitter size={22} />, link: "https://twitter.com/your-handle" },
+          { icon: <Mail size={22} />, link: "mailto:iddychesire098@gmail.com" },
+        ].map((social, idx) => (
+          <a
+            key={idx}
+            href={social.link || "#"}
+            target={social.link.startsWith("mailto:") ? "_self" : "_blank"}
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-gray-800 text-gray-300 hover:bg-blue-500 hover:text-white 
+                       transform hover:scale-110 transition-all duration-300"
+          >
+            {social.icon}
+          </a>
+        ))}
       </div>
     </section>
   );

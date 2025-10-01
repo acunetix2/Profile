@@ -17,7 +17,7 @@ function Contact() {
           Email:{" "}
           <a
             href="mailto:iddychesire098@gmail.com"
-            className="text-orange-500 hover:underline"
+            className="text-blue-400 hover:underline"
           >
             iddychesire098@gmail.com
           </a>
@@ -29,7 +29,7 @@ function Contact() {
             href="https://www.linkedin.com/in/iddy-k-chesire-55009b264/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-300 hover:text-orange-500 transform hover:scale-110 transition-all duration-300"
+            className="text-gray-600 dark:text-gray-300 hover:text-blue-400 transform hover:scale-110 transition-all duration-300"
           >
             <Linkedin size={28} />
           </a>
@@ -37,13 +37,13 @@ function Contact() {
             href="https://github.com/acunetix2/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-300 hover:text-orange-500 transform hover:scale-110 transition-all duration-300"
+            className="text-gray-600 dark:text-gray-300 hover:text-blue-400 transform hover:scale-110 transition-all duration-300"
           >
             <Github size={28} />
           </a>
           <a
             href="mailto:iddychesire098@gmail.com"
-            className="text-gray-600 dark:text-gray-300 hover:text-orange-500 transform hover:scale-110 transition-all duration-300"
+            className="text-gray-600 dark:text-gray-300 hover:text-blue-400 transform hover:scale-110 transition-all duration-300"
           >
             <Mail size={28} />
           </a>
