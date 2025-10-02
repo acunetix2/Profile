@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,22 +10,15 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
-  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
-
   return (
     <Router>
       <div className="flex min-h-screen bg-white dark:bg-gray-900">
-        {/* Sidebar (toggleable) */}
-        {isSidebarOpen && <Sidebar />}
+        {/* Sidebar */}
+        <Sidebar />
 
         {/* Main content area */}
         <div className="flex flex-col flex-1 md:ml-56">
-          {/* Top Navbar */}
-          <Navbar toggleSidebar={toggleSidebar} />
-
-          <main className="flex-1 p-6 pt-20 transition-all duration-300">
+          <main className="flex-1 p-6 pt-6 transition-all duration-300">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
