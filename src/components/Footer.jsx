@@ -28,7 +28,7 @@ function Footer() {
             href="https://linkedin.com/in/iddy-k-chesire-55009b264/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-500 transform hover:scale-110 transition duration-300"
+            className="text-blue-400 hover:text-blue-500 transform hover:scale-110 transition duration-300"
           >
             <Linkedin size={22} />
           </a>
@@ -36,13 +36,13 @@ function Footer() {
             href="https://twitter.com/metapeek"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-sky-400 transform hover:scale-110 transition duration-300"
+            className="text-sky-400 hover:text-sky-400 transform hover:scale-110 transition duration-300"
           >
             <Twitter size={22} />
           </a>
           <a
             href="mailto:iddychesire098@gmail.com"
-            className="text-gray-400 hover:text-pink-400 transform hover:scale-110 transition duration-300"
+            className="text-green-400 hover:text-pink-400 transform hover:scale-110 transition duration-300"
           >
             <Mail size={22} />
           </a>

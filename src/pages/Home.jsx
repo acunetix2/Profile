@@ -54,7 +54,7 @@ function Home() {
         {[
           { icon: <Github size={22} />, link: "https://github.com/acunetix2" },
           { icon: <Linkedin size={22} />, link: "https://www.linkedin.com/in/iddy-k-chesire-55009b264/" },
-          { icon: <Twitter size={22} />, link: "https://twitter.com/your-handle" },
+          { icon: <Twitter size={22} />, link: "https://twitter.com/metapeek" },
           { icon: <Mail size={22} />, link: "mailto:iddychesire098@gmail.com" },
         ].map((social, idx) => (
           <a
@@ -62,7 +62,7 @@ function Home() {
             href={social.link || "#"}
             target={social.link.startsWith("mailto:") ? "_self" : "_blank"}
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-800 text-gray-300 hover:bg-blue-500 hover:text-white 
+            className="p-3 rounded-full bg-sky-800 text-gray-300 hover:bg-blue-500 hover:text-white 
                        transform hover:scale-110 transition-all duration-300"
           >
             {social.icon}
