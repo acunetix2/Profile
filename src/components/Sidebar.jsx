@@ -40,7 +40,7 @@ const Sidebar = () => {
           size="icon"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
-          className="text-gray-300 hover:text-white transition"
+          className="text-gray-300 hover:text-white transition relative z-50"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </Button>
@@ -112,7 +112,7 @@ const Sidebar = () => {
             transition={{ type: "spring", stiffness: 90, damping: 18 }}
             className="fixed top-0 left-0 h-screen w-56
                        bg-gradient-to-b from-gray-950 via-gray-900 to-blue-950
-                       border-r border-gray-800 shadow-xl flex flex-col justify-between pt-12 z-50 md:hidden"
+                       border-r border-gray-800 shadow-xl flex flex-col justify-between pt-12 z-40 md:hidden"
           >
             {/* Branding (optional for mobile) */}
             <div className="flex flex-col items-center p-6 border-b border-gray-800">
