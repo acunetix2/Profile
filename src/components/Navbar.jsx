@@ -9,9 +9,9 @@ function Navbar() {
       transition={{ type: "spring", stiffness: 90, damping: 14 }}
       className="fixed top-0 left-0 md:left-56 right-0 h-20 
                  bg-gray-950 backdrop-blur-xl flex items-center justify-between px-6 
-                 shadow-xl shadow-blue-500/20 z-50 border-b border-blue-500/10"
+                 shadow-xl shadow-blue-500/20 z-30 border-b border-blue-500/10"
     >
-      {/* Left: Branding Quote */}
+      {/* Branding Quote */}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
@@ -22,9 +22,9 @@ function Navbar() {
         </h1>
       </motion.div>
 
-      {/* Right: (Empty / Reserved for future items) */}
+      {/* Right Section */}
       <div className="flex items-center gap-3">
-        {/* You can add buttons, icons, or user profile here */}
+        {/* Add profile or buttons if needed */}
       </div>
     </motion.nav>
   );
