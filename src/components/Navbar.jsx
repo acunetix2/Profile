@@ -7,7 +7,7 @@ function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 90, damping: 14 }}
-      className="fixed top-0 left-56 right-0 h-20 
+      className="fixed top-0 left-0 md:left-56 right-0 h-20 
                  bg-gray-950 backdrop-blur-xl flex items-center justify-between px-6 
                  shadow-xl shadow-blue-500/20 z-50 border-b border-blue-500/10"
     >
