@@ -12,13 +12,12 @@ export default defineConfig({
     },
   },
   server: {
-    // Fix React Router refresh issue in dev
-    historyApiFallback: true
+    // Vite handles SPA routing automatically in dev
+    open: true, // optional: open browser on dev start
   },
   build: {
-    // Optional: ensure SPA routing works in production
     rollupOptions: {
-      input: path.resolve(__dirname, 'index.html')
-    }
-  }
+      input: path.resolve(__dirname, "index.html"),
+    },
+  },
 })
