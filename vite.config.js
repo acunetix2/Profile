@@ -11,4 +11,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    // Fix React Router refresh issue in dev
+    historyApiFallback: true
+  },
+  build: {
+    // Optional: ensure SPA routing works in production
+    rollupOptions: {
+      input: path.resolve(__dirname, 'index.html')
+    }
+  }
 })
