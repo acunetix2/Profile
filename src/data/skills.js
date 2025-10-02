@@ -23,6 +23,7 @@ import {
 } from "react-icons/si";
 import { FaNetworkWired } from "react-icons/fa6";
 import MetasploitIcon from "@/components/MetasploitIcon";
+
 const skills = {
   technical: [
     { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
@@ -57,14 +58,14 @@ const skills = {
   tools: [
     { name: "Kali Linux", icon: FaLinux },
     { name: "Wireshark", icon: SiWireshark },
-    { name: "Metasploit", icon: MetasploitIcon, color: "text-pink-400" },                 // name-only (no simple-icon)
+    { name: "Metasploit", icon: MetasploitIcon, color: "text-pink-400" },
     { name: "Nmap", icon: FaNetworkWired, color: "text-green-400" },
-    { name: "Enum4Linux" },                // CLI tool — name-only
-    { name: "Hydra" },                     // CLI tool — name-only
+    { name: "Enum4Linux" }, // CLI tool — name-only
+    { name: "Hydra" }, // CLI tool — name-only
     { name: "Cisco Packet Tracer", icon: SiCisco },
-    { name: "Huawei VRP" },                // vendor-specific — name-only
+    { name: "Huawei VRP" }, // vendor-specific — name-only
     { name: "Shodan", icon: FaSearch, color: "text-red-500" }, // fallback icon
-    { name: "ZenMap" }                     // GUI for Nmap — name-only
+    { name: "ZenMap" },
   ],
 };
 

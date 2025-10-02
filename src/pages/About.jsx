@@ -1,6 +1,6 @@
 import SectionHeading from "../components/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { FileDown } from "lucide-react";
+import { FileDown, Shield, Github } from "lucide-react";
 
 function About() {
   return (
@@ -27,6 +27,47 @@ function About() {
           building projects that combine practical knowledge with real-world 
           problem-solving.
         </p>
+
+        {/* TryHackMe Profile */}
+        <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-blue-500/40 transition text-center">
+          <div className="flex items-center gap-3 justify-center mb-3">
+            <Shield className="w-6 h-6 text-blue-400" />
+            <h3 className="text-white font-semibold text-lg">TryHackMe Profile</h3>
+          </div>
+          <a
+            href="https://tryhackme.com/p/Phantomjac007"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <iframe
+              src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3276864"
+              title="TryHackMe Profile Badge"
+              className="mx-auto w-full max-w-md h-[220px] border-0 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            ></iframe>
+          </a>
+        </div>
+
+        {/* GitHub Stats */}
+        <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-blue-500/40 transition text-center">
+          <div className="flex items-center gap-3 justify-center mb-3">
+            <Github className="w-6 h-6 text-gray-400" />
+            <h3 className="text-white font-semibold text-lg">GitHub Stats</h3>
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            {/* Stats Card */}
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=acunetix2&show_icons=true&theme=radical"
+              alt="GitHub Stats"
+              className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+            {/* Languages Card */}
+            <img
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=acunetix2&layout=compact&theme=radical"
+              alt="Most Used Languages"
+              className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
 
         {/* Resume Button */}
         <div className="flex justify-start">
