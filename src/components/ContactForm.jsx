@@ -1,5 +1,5 @@
-// src/components/ContactForm.jsx
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -13,66 +13,107 @@ const ContactForm = () => {
   });
 
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    // simple validation
     if (!form.name || !form.email || !form.message) {
-      setStatus("Please fill in all fields.");
+      setStatus("⚠️ Please fill in all fields.");
+      setTimeout(() => setStatus(""), 3000);
       return;
     }
 
-    try {
-      // placeholder: you can connect to EmailJS, Nodemailer API, or backend
-      console.log("Form submitted:", form);
+    setLoading(true);
+    setStatus("Sending...");
 
-      setStatus("Message sent successfully!");
-      setForm({ name: "", email: "", message: "" });
-    } catch (err) {
-      setStatus("Something went wrong. Please try again.");
-    }
+    // ✅ EmailJS send
+    emailjs
+      .send(
+        "service_fc36n6w", // EmailJS service ID
+        "template_7wqzaxa", // EmailJS template ID
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+        },
+        "oLbjccXfia6m6eNv5" // EmailJS public key
+      )
+      .then(
+        () => {
+          setStatus("✅ Message sent successfully!");
+          setForm({ name: "", email: "", message: "" });
+          setLoading(false);
+
+          // Auto clear status after 3s
+          setTimeout(() => setStatus(""), 3000);
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          setStatus("❌ Failed to send. Please try again.");
+          setLoading(false);
+
+          // Auto clear status after 3s
+          setTimeout(() => setStatus(""), 3000);
+        }
+      );
   };
 
   return (
-    <Card className="max-w-xl mx-auto p-6 shadow-lg rounded-2xl">
+    <Card
+      className="max-w-xl mx-auto p-6 rounded-2xl 
+      shadow-[0_0_30px_rgba(139,92,246,0.5)] 
+      bg-gradient-to-br from-gray-900 via-gray-800 to-black 
+      border border-purple-400/40 
+      animate-[floatBounce_6s_ease-in-out_infinite]"
+    >
       <CardHeader>
-        <CardTitle className="text-2xl font-semibold text-green-600 text-center">
-          Reach me out
+        <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-gray-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(167,139,250,0.7)]">
+          Reach Me Out
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4 text-blue-400">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-5 text-indigo-200 animate-fadeIn"
+        >
           <Input
             type="text"
             name="name"
             placeholder="Your Name"
             value={form.name}
             onChange={handleChange}
+            className="bg-transparent border border-blue-400/50 text-purple-200 placeholder:text-purple-300/50 rounded-xl shadow-[0_0_12px_rgba(167,139,250,0.4)] focus:ring-2 focus:ring-purple-400 focus:border-purple-500 transition-all"
           />
           <Input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Email"
             value={form.email}
             onChange={handleChange}
+            className="bg-transparent border border-blue-400/50 text-indigo-200 placeholder:text-indigo-300/50 rounded-xl shadow-[0_0_12px_rgba(129,140,248,0.4)] focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-all"
           />
           <Textarea
             name="message"
-            placeholder="Your Message"
+            placeholder="💬 Your Message"
             value={form.message}
             onChange={handleChange}
+            className="bg-transparent border border-blue-400/50 text-purple-200 placeholder:text-purple-300/50 rounded-xl shadow-[0_0_12px_rgba(196,181,253,0.4)] focus:ring-2 focus:ring-purple-400 focus:border-purple-500 transition-all"
           />
-          <Button type="submit" className="w-full">
-            Send Message
+          <Button
+            type="submit"
+            disabled={loading}
+            className="w-full rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold hover:from-indigo-500 hover:to-purple-500 shadow-[0_0_20px_rgba(167,139,250,0.6)] hover:shadow-[0_0_30px_rgba(129,140,248,0.8)] transition-all duration-300"
+          >
+            {loading ? "sending..." : "Send Message"}
           </Button>
         </form>
         {status && (
-          <p className="text-center mt-4 text-sm text-muted-foreground">
+          <p className="text-center mt-4 text-sm text-purple-300 animate-pulse">
             {status}
           </p>
         )}
