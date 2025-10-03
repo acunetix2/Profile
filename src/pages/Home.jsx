@@ -24,10 +24,9 @@ function Home() {
 
       {/* About */}
       <p className="max-w-2xl text-gray-300 mb-6 leading-relaxed">
-        I’m a passionate Cybersecurity Analyst(SOC L1) and Junior Network Administrator with hands-on 
-        experience in protecting digital infrastructure, detecting vulnerabilities, and ensuring 
-        secure communication. I also build and maintain web applications, combining technical 
-        networking expertise with full-stack development skills.
+        I’m a passionate Cybersecurity Analyst(SOC L1) and Junior Network Administrator with an interest in protecting digital infrastructure, detecting vulnerabilities, and ensuring 
+        secure communication. I also engage in building and maintain web applications, combining technical 
+        networking expertise with my development skills.
       </p>
 
       {/* Buttons */}

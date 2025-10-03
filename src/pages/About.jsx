@@ -1,6 +1,6 @@
-import SectionHeading from "../components/SectionHeading";
+import SectionHeading from "../components/SectionHeading"; 
 import { Button } from "@/components/ui/button";
-import { FileDown, Shield, Github } from "lucide-react";
+import { FileDown, Shield, Github, Gamepad2 } from "lucide-react";
 
 function About() {
   return (
@@ -17,7 +17,7 @@ function About() {
           and sharpening my skills in protecting systems, securing networks, and 
           developing applications. Alongside this, I have a growing passion for 
           <span className="text-green-400"> Artificial Intelligence (AI)</span> and how it 
-          intersects with security and technology.
+          intersects with cybersecurity and emerging technologies. And <span className="text-green-400">I love playing CTFs.</span>
         </p>
 
         <p className="text-gray-300 leading-relaxed mb-6">
@@ -32,7 +32,7 @@ function About() {
         <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-blue-500/40 transition text-center">
           <div className="flex items-center gap-3 justify-center mb-3">
             <Shield className="w-6 h-6 text-blue-400" />
-            <h3 className="text-white font-semibold text-lg">TryHackMe Profile</h3>
+            <h3 className="text-white font-semibold text-lg">My TryHackMe Profile</h3>
           </div>
           <a
             href="https://tryhackme.com/p/Phantomjac007"
@@ -67,6 +67,20 @@ function About() {
               className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
             />
           </div>
+        </div>
+
+        {/* Favorite Games */}
+        <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-green-500/40 transition text-center">
+          <div className="flex items-center gap-3 justify-center mb-3">
+            <Gamepad2 className="w-6 h-6 text-green-400" />
+            <h3 className="text-white font-semibold text-lg">My Favorite Games</h3>
+          </div>
+          <p className="text-gray-300 leading-relaxed">
+            I enjoy playing <span className="text-green-400 font-semibold">Chess</span> the most, 
+            as it challenges my strategic thinking and patience. 
+            I also love playing <span className="text-green-400 font-semibold"> Checkers </span> 
+            for its simplicity and fun competitiveness.
+          </p>
         </div>
 
         {/* Resume Button */}
