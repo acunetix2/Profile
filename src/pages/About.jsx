@@ -75,12 +75,20 @@ function About() {
             <Gamepad2 className="w-6 h-6 text-green-400" />
             <h3 className="text-white font-semibold text-lg">My Favorite Games</h3>
           </div>
-          <p className="text-gray-300 leading-relaxed">
-            I enjoy playing <span className="text-green-400 font-semibold">Chess</span> the most, 
-            as it challenges my strategic thinking and patience. 
-            I also love playing <span className="text-green-400 font-semibold"> Checkers </span> 
-            for its simplicity and fun competitiveness.
-          </p>
+
+          <div className="grid grid-cols-2 gap-6 justify-center items-center mt-4">
+            {/* Chess */}
+            <div className="p-4 bg-gray-900/70 border border-gray-700 rounded-lg shadow-md hover:scale-105 transition-transform">
+              <span className="text-4xl">♟️</span>
+              <p className="text-gray-300 mt-2 font-semibold">Chess</p>
+            </div>
+
+            {/* Checkers */}
+            <div className="p-4 bg-gray-900/70 border border-gray-700 rounded-lg shadow-md hover:scale-105 transition-transform">
+              <span className="text-4xl">⭕⬛</span>
+              <p className="text-gray-300 mt-2 font-semibold">Checkers</p>
+            </div>
+          </div>
         </div>
 
         {/* Resume Button */}
