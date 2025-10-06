@@ -1,4 +1,3 @@
-// src/data/skills.js
 import {
   FaReact,
   FaPython,
@@ -8,7 +7,7 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaLinux,
-  FaSearch, // fallback for tools without simple-icons
+  FaSearch, 
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -60,11 +59,11 @@ const skills = {
     { name: "Wireshark", icon: SiWireshark },
     { name: "Metasploit", icon: MetasploitIcon, color: "text-pink-400" },
     { name: "Nmap", icon: FaNetworkWired, color: "text-green-400" },
-    { name: "Enum4Linux" }, // CLI tool — name-only
-    { name: "Hydra" }, // CLI tool — name-only
+    { name: "Enum4Linux" }, 
+    { name: "Hydra" }, 
     { name: "Cisco Packet Tracer", icon: SiCisco },
-    { name: "Huawei VRP" }, // vendor-specific — name-only
-    { name: "Shodan", icon: FaSearch, color: "text-red-500" }, // fallback icon
+    { name: "Huawei VRP" }, 
+    { name: "Shodan", icon: FaSearch, color: "text-red-500" }, 
     { name: "ZenMap" },
   ],
 };

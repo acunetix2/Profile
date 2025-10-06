@@ -1,13 +1,10 @@
 # 🌐 Portfolio
 
-A modern and responsive portfolio website built with **React, TailwindCSS, and Framer Motion**.  
-Showcases my projects and skills with a glowing dark/light theme.
+My Portfolio Website Tailored in my current achievements October2025
 
-## 🚀 Live Demo
-[Visit Portfolio](https://your-portfolio-link.com)
-
-## 🛠️ Tech
-React • TailwindCSS • Framer Motion • shadcn/ui
+## Live 
+[Visit Portfolio](https://iddy-chesire.vercel.app)
 
 ## 📬 Contact
-Iddy Kibor Chesire • your.email@example.com
+Iddy Kibor Chesire • iddychesire098@gmail.com
+You can contact me directly in my portfolio website contact form for faster response.

@@ -12,8 +12,7 @@ export default defineConfig({
     },
   },
   server: {
-    // Vite handles SPA routing automatically in dev
-    open: true, // optional: open browser on dev start
+    open: true, 
   },
   build: {
     rollupOptions: {

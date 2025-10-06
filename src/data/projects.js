@@ -6,7 +6,7 @@ const projects = [
     tools: ["Python", "Pillow", "ExifTool", "Tkinter"],
     github: "https://github.com/acunetix2/metapeek",
     demo: "https://meta-peek.vercel.app",
-    image: "/images/metapeek.png", // optional screenshot
+    image: "/images/metapeek.png", 
   },
   {
     title: "Sysmonitor - CLI System Monitoring Tool",
@@ -15,16 +15,16 @@ const projects = [
     tools: ["Python", "psutil", "Click"],
     github: "https://github.com/acunetix2/sysmonitor",
     demo: null,
-    image: "/images/sysmonitor.png", // optional screenshot
+    image: "/images/sysmonitor.png", 
   },
   {
     title: "TaskBoard - Task Management Site",
     description:
       "A web-based task management platform for creating, organizing, and tracking tasks with a clean interface.",
     tools: ["React", "TailwindCSS", "Node.js", "MongoDB"],
-    github: "https://github.com/acunetix2/taskboard",
-    demo: "https://activa-blond.vercel.app", // replace with real demo if available
-    image: "/images/taskboard.png", // optional screenshot
+    github: "https://github.com/acunetix2/devtaskmanager",
+    demo: "https://activa-blond.vercel.app", 
+    image: "/images/taskboard.png", 
   },
 ];
 
