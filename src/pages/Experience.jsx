@@ -15,9 +15,27 @@ import {
   Award as AwardIcon,
 } from "lucide-react";
 
+// Reusable animation variants for slow slide-in
+const slideIn = {
+  hidden: { opacity: 0, y: 100 }, // start lower on the screen
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.25, // slower stagger
+      duration: 1.2, // smooth slow motion
+      ease: [0.25, 0.1, 0.25, 1], // smooth cubic easing
+    },
+  }),
+};
+
 function Experience() {
   return (
-    <section className="px-6 py-12 max-w-5xl mx-auto bg-gradient-to-b from-gray-900 via-blue-900 to-gray-800">
+    <motion.section
+      className="px-6 py-12 max-w-5xl mx-auto bg-gradient-to-b from-gray-900 via-blue-900 to-gray-800 overflow-hidden"
+      initial="hidden"
+      animate="visible"
+    >
       {/* Main Heading */}
       <SectionHeading title="Experience & Education" />
 
@@ -30,19 +48,17 @@ function Experience() {
           {experience.map((job, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-[#0f172a] border border-gray-800 rounded-xl p-5 shadow hover:shadow-blue-500/20 transition"
+              custom={i}
+              variants={slideIn}
+              whileHover={{ y: -6, scale: 1.03 }}
+              className="bg-[#0f172a]/90 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/30 hover:border-blue-500/30 transition-all duration-300"
             >
-              <h3 className="text-lg font-semibold text-indigo-400">
-                {job.role}
-              </h3>
+              <h3 className="text-lg font-semibold text-indigo-400">{job.role}</h3>
               <p className="text-gray-300">{job.company}</p>
               <span className="text-sm text-green-400 italic block mt-1">
                 {job.duration}
               </span>
-              <ul className="list-disc list-inside mt-2 text-green-400 space-y-1">
+              <ul className="list-disc list-inside mt-3 text-green-400 space-y-1 text-sm">
                 {job.details.map((detail, j) => (
                   <li key={j}>{detail}</li>
                 ))}
@@ -61,14 +77,12 @@ function Experience() {
           {education.map((edu, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-[#0f172a] border border-gray-800 rounded-xl p-5 shadow hover:shadow-blue-500/20 transition"
+              custom={i}
+              variants={slideIn}
+              whileHover={{ y: -6, scale: 1.03 }}
+              className="bg-[#0f172a]/90 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/30 hover:border-blue-500/30 transition-all duration-300"
             >
-              <h3 className="text-lg font-semibold text-indigo-400">
-                {edu.degree}
-              </h3>
+              <h3 className="text-lg font-semibold text-indigo-400">{edu.degree}</h3>
               <p className="text-gray-300">{edu.school}</p>
               {edu.year && (
                 <span className="text-sm text-green-400 italic block mt-1">
@@ -90,17 +104,17 @@ function Experience() {
         <h2 className="flex items-center gap-2 text-2xl font-bold text-blue-400 mb-6 border-b border-gray-700 pb-2">
           <BadgeCheck className="w-6 h-6 text-orange-500" /> Certifications
         </h2>
-        <ul className="space-y-3">
+        <ul className="space-y-4">
           {certifications.map((cert, i) => (
             <motion.li
               key={i}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-[#0f172a] border border-gray-800 rounded-xl p-4 shadow hover:shadow-blue-500/20 transition"
+              custom={i}
+              variants={slideIn}
+              whileHover={{ scale: 1.03, y: -4 }}
+              className="bg-[#0f172a]/90 backdrop-blur-sm border border-gray-800 rounded-2xl p-5 shadow-lg hover:shadow-blue-500/30 hover:border-blue-500/30 transition-all duration-300"
             >
               <span className="text-indigo-400 font-semibold">{cert.title}</span>{" "}
-              <span className="text-green-400"> : : {cert.issuer}</span>
+              <span className="text-green-400"> :: {cert.issuer}</span>
             </motion.li>
           ))}
         </ul>
@@ -111,14 +125,14 @@ function Experience() {
         <h2 className="flex items-center gap-2 text-2xl font-bold text-blue-400 mb-6 border-b border-gray-700 pb-2">
           <BookOpen className="w-6 h-6 text-orange-500" /> Training
         </h2>
-        <ul className="space-y-3">
+        <ul className="space-y-4">
           {training.map((train, i) => (
             <motion.li
               key={i}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-[#0f172a] border border-gray-800 rounded-xl p-4 shadow hover:shadow-blue-500/20 transition"
+              custom={i}
+              variants={slideIn}
+              whileHover={{ scale: 1.03, y: -4 }}
+              className="bg-[#0f172a]/90 backdrop-blur-sm border border-gray-800 rounded-2xl p-5 shadow-lg hover:shadow-blue-500/30 hover:border-blue-500/30 transition-all duration-300"
             >
               <span className="text-indigo-400 font-semibold">{train.title}</span>{" "}
               <span className="text-green-400">
@@ -134,14 +148,14 @@ function Experience() {
         <h2 className="flex items-center gap-2 text-2xl font-bold text-blue-400 mb-6 border-b border-gray-700 pb-2">
           <AwardIcon className="w-6 h-6 text-orange-500" /> Awards
         </h2>
-        <ul className="space-y-3">
+        <ul className="space-y-4">
           {awards.map((award, i) => (
             <motion.li
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-[#0f172a] border border-gray-800 rounded-xl p-4 shadow hover:shadow-blue-500/20 transition"
+              custom={i}
+              variants={slideIn}
+              whileHover={{ y: -4, scale: 1.03 }}
+              className="bg-[#0f172a]/90 backdrop-blur-sm border border-gray-800 rounded-2xl p-5 shadow-lg hover:shadow-blue-500/30 hover:border-blue-500/30 transition-all duration-300"
             >
               {award.link ? (
                 <a
@@ -164,7 +178,7 @@ function Experience() {
           ))}
         </ul>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
