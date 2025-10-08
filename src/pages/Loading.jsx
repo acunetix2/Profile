@@ -4,7 +4,7 @@ export default function CyberLoading({ onFinish }) {
   const [progress, setProgress] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
   const [visible, setVisible] = useState(true);
-  const [currentTime, setCurrentTime] = useState(new Date()); // Real-time clock
+  const [currentTime, setCurrentTime] = useState(new Date()); 
 
   useEffect(() => {
     const interval = setInterval(() => {
