@@ -1,12 +1,12 @@
 const projects = [
   {
-    title: "Metapeek - Image Forensics Tool",
+    title: "NeuroScan Forensics Tool",
     description:
-      "An advanced image forensics tool that extracts, analyzes, and detects metadata inconsistencies in digital images for authenticity verification.",
+      "An advanced image forensics tool that extracts, analyzes, and detects metadata inconsistencies in digital images, videos and documents for integrity verification.",
     tools: ["Python", "Pillow", "ExifTool", "Tkinter"],
-    github: "https://github.com/acunetix2/metapeek",
-    demo: "https://meta-peek.vercel.app",
-    image: "/images/metapeek.png", 
+    github: "https://github.com/acunetix2/Neuroscan",
+    demo: "https://neuroscanpro.vercel.app",
+    image: "/assets/neuroscan.png", 
   },
   {
     title: "Sysmonitor - CLI System Monitoring Tool",
@@ -15,10 +15,10 @@ const projects = [
     tools: ["Python", "psutil", "Click"],
     github: "https://github.com/acunetix2/sysmonitor",
     demo: null,
-    image: "/images/sysmonitor.png", 
+    image: "/assets/sysmonitor.png", 
   },
   {
-    title: "TaskBoard - Task Management Site",
+    title: "TaskBoard - Simple Task Management",
     description:
       "A web-based task management platform for creating, organizing, and tracking tasks with a clean interface.",
     tools: ["React", "TailwindCSS", "Node.js", "MongoDB"],

@@ -19,7 +19,7 @@ function Home() {
 
       {/* Title */}
       <h2 className="text-xl md:text-2xl text-blue-400 mb-4 font-medium">
-        Cybersecurity Analyst | Network Admin (Jr) | Web Developer
+        Cybersecurity Analyst | IT Undergraduate | MERN Developer | TryHackMe Top 3%
       </h2>
 
       {/* About */}

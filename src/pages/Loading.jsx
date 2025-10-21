@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function CyberLoading({ onFinish }) {
+export default function Loading({ onFinish }) {
   const [progress, setProgress] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
   const [visible, setVisible] = useState(true);
@@ -8,7 +8,7 @@ export default function CyberLoading({ onFinish }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress((prev) => (prev >= 100 ? 100 : prev + 1));
+      setProgress((prev) => (prev >= 100 ? 100 : prev + 10));
     }, 50);
 
     if (progress >= 100) {
@@ -49,8 +49,8 @@ export default function CyberLoading({ onFinish }) {
       }`}
     >
       {/* --- REAL-TIME CLOCK --- */}
-      <div className="absolute top-2 sm:top-4 text-purple-400 font-mono text-[10px] sm:text-xs tracking-widest">
-        {timeString} | {dateString}
+      <div className="absolute top-2 sm:top-4 text-orange-500 font-mono text-[10px] sm:text-xs tracking-widest">
+        Time: {timeString} | {dateString}
       </div>
 
       {/* Animated background */}
@@ -111,12 +111,12 @@ export default function CyberLoading({ onFinish }) {
 
           <div className="absolute inset-12 sm:inset-16 rounded-full border border-cyan-400 bg-gradient-to-br from-cyan-950/50 to-blue-950/50 backdrop-blur-sm flex items-center justify-center">
             <div className="text-center">
-              <div className="text-cyan-300 text-[8px] sm:text-xs mb-1 sm:mb-2 tracking-widest opacity-70">
-                PROFILE INITIALIZING
+              <div className="text-green-400 text-bold text-[8px] sm:text-xs mb-1 sm:mb-2 tracking-widest opacity-70">
+                Initiaizing Profile
               </div>
-              <div className="text-cyan-300 text-2xl sm:text-4xl font-bold">{progress}%</div>
-              <div className="text-cyan-400 text-[8px] sm:text-xs mt-1 sm:mt-2 tracking-widest opacity-70">
-                {progress <= 100 ? "INITIALIZING" : "COMPLETE"}
+              <div className="text-green-500 text-2xl sm:text-4xl font-bold">{progress}%</div>
+              <div className="text-green-400 text-bold text-[8px] sm:text-xs mt-1 sm:mt-2 tracking-widest opacity-70">
+                {progress <= 100 ? "Initializing" : "Complete"}
               </div>
             </div>
           </div>
@@ -127,8 +127,8 @@ export default function CyberLoading({ onFinish }) {
           {/* Data transmission panel */}
           <div className="border border-cyan-400/30 bg-slate-900/40 backdrop-blur-sm p-3 sm:p-4 rounded">
             <div className="flex items-center justify-between mb-2 sm:mb-3">
-              <div className="text-cyan-400 text-[8px] sm:text-xs tracking-widest">
-                WELCOME TO IDDY CHESIRE'S PROFILE
+              <div className="text-green-500 text-bold text-[8px] sm:text-xs tracking-widest">
+                Portfolio Profile 
               </div>
               <div className="flex space-x-1">
                 {[1, 2, 3].map((i) => (
@@ -153,7 +153,7 @@ export default function CyberLoading({ onFinish }) {
                       style={{ width: `${(progress + i * 15) % 100}%` }}
                     ></div>
                   </div>
-                  <div className="text-cyan-400 text-[6px] sm:text-xs font-mono">
+                  <div className="text-green-400 text-[6px] sm:text-xs font-mono">
                     {((progress + i * 10) % 100).toString().padStart(2, "0")}
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function CyberLoading({ onFinish }) {
                 </svg>
               </div>
               <div className="absolute inset-1 sm:inset-2 rounded-full border border-cyan-400 bg-slate-900/60 flex items-center justify-center">
-                <div className="text-cyan-400 text-[8px] sm:text-xs font-bold">{progress}%</div>
+                <div className="text-red-500 text-[8px] sm:text-xs font-bold">{progress}%</div>
               </div>
             </div>
             <div className="flex-1 space-y-1 sm:space-y-2">
@@ -186,7 +186,7 @@ export default function CyberLoading({ onFinish }) {
                 <div key={i} className="flex items-center space-x-1">
                   <div className="flex-1 h-1 bg-slate-700 rounded overflow-hidden">
                     <div
-                      className="h-full bg-cyan-400 transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-red-500 via-blue-500 to-green-500 transition-all duration-500"
                       style={{
                         width: `${Math.abs(Math.sin((progress + i * 30) * 0.05)) * 100}%`,
                       }}
@@ -201,9 +201,9 @@ export default function CyberLoading({ onFinish }) {
           <div className="border border-cyan-400/30 bg-slate-900/40 backdrop-blur-sm p-3 sm:p-4 rounded">
             <div className="grid grid-cols-3 gap-2 sm:gap-3">
               {[...Array(6)].map((_, i) => (
-                <div key={i} className="border border-cyan-400/20 p-1 sm:p-2 text-center">
+                <div key={i} className="border border-cyan-500/20 p-2 sm:p-2 text-center">
                   <div
-                    className="text-cyan-400 text-[8px] sm:text-xs font-mono animate-pulse"
+                    className="text-green-400 text-[8px] sm:text-xs font-mono animate-pulse"
                     style={{ animationDelay: `${i * 0.15}s` }}
                   >
                     {Math.floor(Math.random() * 999)}
@@ -218,13 +218,13 @@ export default function CyberLoading({ onFinish }) {
       {/* Bottom loading bar */}
       <div className="absolute bottom-0 left-0 w-full">
         <div className="flex items-center justify-center mb-2 sm:mb-4">
-          <div className="text-cyan-400 text-[8px] sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] font-bold">
+          <div className="text-green-500 text-[8px] sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] font-bold">
             LOADING
           </div>
         </div>
         <div className="h-1 bg-slate-800">
           <div
-            className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 transition-all duration-300"
+            className="h-full bg-gradient-to-r from-red-500 via-blue-500 to-green-500 transition-all duration-300"
             style={{ width: `${progress}%` }}
           ></div>
         </div>

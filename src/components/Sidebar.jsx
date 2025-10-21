@@ -20,13 +20,13 @@ const Sidebar = () => {
   const location = useLocation();
 
   const navItems = [
-    { id: "/", label: "Home", icon: <Home size={18} /> },
-    { id: "/about", label: "About", icon: <User size={18} /> },
-    { id: "/portfolio", label: "Projects", icon: <FolderKanban size={18} /> },
-    { id: "/experience", label: "Experience & Education", icon: <Briefcase size={18} /> },
-    { id: "/skills", label: "Skills & Tools", icon: <PenTool size={18} /> },
-    { id: "/blog", label: "Blog & Articles", icon: <FaBlogger size={18} /> },
-    { id: "/contact", label: "Contact", icon: <Mail size={18} /> },
+    { id: "/me", label: "Home", icon: <Home size={18} /> },
+    { id: "/me/aboutme", label: "About Me", icon: <User size={18} /> },
+    { id: "/me/portfolio", label: "My Projects", icon: <FolderKanban size={18} /> },
+    { id: "/me/experience", label: "Experience & Education", icon: <Briefcase size={18} /> },
+    { id: "/me/skills", label: "Skills & Tools", icon: <PenTool size={18} /> },
+    { id: "/me/blog", label: "Blog & Articles", icon: <FaBlogger size={18} /> },
+    { id: "/me/contact", label: "Contact", icon: <Mail size={18} /> },
   ];
 
   return (
@@ -65,7 +65,7 @@ const Sidebar = () => {
           <h1 className="text-lg font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
             Iddy Chesire
           </h1>
-          <p className="text-xs text-gray-400 mt-1">Develop • Secure • Maintain</p>
+          <p className="text-xs text-cyan-400 mt-1">Develop • Secure • Maintain</p>
         </div>
 
         {/* Navigation */}

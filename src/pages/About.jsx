@@ -80,7 +80,7 @@ function About() {
             {/* Chess */}
             <div className="p-4 bg-gray-900/70 border border-gray-700 rounded-lg shadow-md hover:scale-105 transition-transform">
               <span className="text-4xl">♟️</span>
-              <p className="text-green-300 mt-2 font-semibold">Chess</p>
+              <p className="text-green-500 mt-2 font-semibold">Chess</p>
               <p className="text-white text-sm mt-1">
                 I love playing Chess the most, as it challenges my strategic thinking and patience. 
               </p>
@@ -88,7 +88,7 @@ function About() {
 
             {/* Checkers */}
             <div className="p-4 bg-gray-900/70 border border-gray-700 rounded-lg shadow-md hover:scale-105 transition-transform">
-              <span className="text-4xl">⭕⬛</span>
+              <span className="text-4xl">⭕</span>
               <p className="text-orange-700 mt-2 font-semibold">Checkers</p>
               <p className="text-white text-sm mt-1">
                 I also love playing Checkers for its simplicity and fun competitiveness.

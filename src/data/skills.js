@@ -19,6 +19,7 @@ import {
   SiGnubash,
   SiWireshark,
   SiCisco,
+  SiHuawei,
 } from "react-icons/si";
 import { FaNetworkWired } from "react-icons/fa6";
 import MetasploitIcon from "@/components/MetasploitIcon";
@@ -47,13 +48,6 @@ const skills = {
     { name: "Communication" },
   ],
 
-  stats: [
-    {
-      name: "TryHackMe Top 5%",
-      link: "https://tryhackme.com/p/Phantomjac007",
-    },
-  ],
-
   tools: [
     { name: "Kali Linux", icon: FaLinux },
     { name: "Wireshark", icon: SiWireshark },
@@ -62,9 +56,9 @@ const skills = {
     { name: "Enum4Linux" }, 
     { name: "Hydra" }, 
     { name: "Cisco Packet Tracer", icon: SiCisco },
-    { name: "Huawei VRP" }, 
+    { name: "Huawei VRP", icon:SiHuawei }, 
     { name: "Shodan", icon: FaSearch, color: "text-red-500" }, 
-    { name: "ZenMap" },
+    { name: "ZenMap", icon: FaNetworkWired, color: "text-blue-400" },
   ],
 };
 
