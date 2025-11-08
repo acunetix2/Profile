@@ -47,7 +47,7 @@ const training = [
 ];
 
 const awards = [
-  { title: "TryHackMe Top 4%", link: "https://tryhackme.com/p/Phantomjac007" },
+  { title: "TryHackMe Top 2%", link: "https://tryhackme.com/p/Phantomjac007" },
   { title: "Learn-A-Thon", issuer: "Cisco" },
 ];
 
