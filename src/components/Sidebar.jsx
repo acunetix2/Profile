@@ -51,6 +51,10 @@ const Sidebar = () => {
 
       {/* Desktop Sidebar */}
       <motion.aside
+	    initial={{ x: -260 }}
+        animate={{ x: 0 }}
+        exit={{ x: -260 }}
+        transition={{ type: "spring", stiffness: 90, damping: 18 }}
         className="hidden md:flex fixed top-0 left-0 h-screen w-56
                    bg-gradient-to-b from-gray-950 via-gray-900 to-blue-950
                    border-r border-gray-800 shadow-xl flex-col justify-between pt-0 z-40"

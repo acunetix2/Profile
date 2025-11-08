@@ -1,16 +1,26 @@
-import SectionHeading from "../components/SectionHeading"; 
 import { Button } from "@/components/ui/button";
 import { FileDown, Shield, Github, Gamepad2 } from "lucide-react";
+import { useState } from "react";
+
+function SectionHeading({ title }) {
+  return (
+    <div className="mb-8">
+      <h2 className="text-4xl font-bold text-white">{title}</h2>
+    </div>
+  );
+}
 
 function About() {
+  const [hoveredGame, setHoveredGame] = useState(null);
+
   return (
     <section className="px-6 py-12 max-w-5xl mx-auto bg-gradient-to-b from-gray-900 via-blue-900 to-gray-800">
       <SectionHeading title="About Me" />
 
       <div className="bg-gray-900 border border-gray-800 rounded-xl shadow-lg p-8 mt-8 
-                      hover:shadow-xl transition">
+                      hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300">
         <p className="text-gray-300 leading-relaxed mb-6">
-          I’m <span className="text-white font-semibold">Iddy Kibor Chesire</span>, 
+          I'm <span className="text-white font-semibold">Iddy Kibor Chesire</span>, 
           an aspiring <span className="text-blue-400">Cybersecurity Analyst</span>, 
           <span className="text-blue-400"> Junior Network Administrator</span>, 
           and <span className="text-blue-400">Web Developer</span> currently building 
@@ -23,15 +33,15 @@ function About() {
         <p className="text-gray-300 leading-relaxed mb-6">
           My tech journey began with curiosity breaking down how networks 
           communicate, why security vulnerabilities exist, and how systems can 
-          be made stronger. Since then, I’ve been learning, experimenting, and 
+          be made stronger. Since then, I've been learning, experimenting, and 
           building projects that combine practical knowledge with real-world 
           problem-solving.
         </p>
 
         {/* TryHackMe Profile */}
-        <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-blue-500/40 transition text-center">
+        <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-blue-500/40 hover:bg-gray-800/80 transition-all duration-300 text-center group">
           <div className="flex items-center gap-3 justify-center mb-3">
-            <Shield className="w-6 h-6 text-blue-400" />
+            <Shield className="w-6 h-6 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
             <h3 className="text-white font-semibold text-lg">My TryHackMe Profile</h3>
           </div>
           <a
@@ -48,9 +58,9 @@ function About() {
         </div>
 
         {/* GitHub Stats */}
-        <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-blue-500/40 transition text-center">
+        <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-blue-500/40 hover:bg-gray-800/80 transition-all duration-300 text-center group">
           <div className="flex items-center gap-3 justify-center mb-3">
-            <Github className="w-6 h-6 text-gray-400" />
+            <Github className="w-6 h-6 text-gray-400 group-hover:text-blue-400 group-hover:rotate-12 transition-all duration-300" />
             <h3 className="text-white font-semibold text-lg">GitHub Stats</h3>
           </div>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -70,15 +80,23 @@ function About() {
         </div>
 
         {/* Favorite Games */}
-        <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-green-500/40 transition text-center">
+        <div className="mb-8 mt-6 p-4 rounded-lg border border-gray-800 bg-gray-800/60 hover:border-green-500/40 hover:bg-gray-800/80 transition-all duration-300 text-center group">
           <div className="flex items-center gap-3 justify-center mb-3">
-            <Gamepad2 className="w-6 h-6 text-green-400" />
+            <Gamepad2 className="w-6 h-6 text-green-400 group-hover:scale-110 transition-transform duration-300" />
             <h3 className="text-white font-semibold text-lg">My Favorite Games</h3>
           </div>
 
           <div className="grid grid-cols-2 gap-6 justify-center items-center mt-4">
             {/* Chess */}
-            <div className="p-4 bg-gray-900/70 border border-gray-700 rounded-lg shadow-md hover:scale-105 transition-transform">
+            <div 
+              className={`p-4 bg-gray-900/70 border rounded-lg shadow-md transition-all duration-300 cursor-pointer ${
+                hoveredGame === 'chess' 
+                  ? 'border-green-500 scale-105 shadow-green-500/30' 
+                  : 'border-gray-700 hover:border-green-500/50'
+              }`}
+              onMouseEnter={() => setHoveredGame('chess')}
+              onMouseLeave={() => setHoveredGame(null)}
+            >
               <span className="text-4xl">♟️</span>
               <p className="text-green-500 mt-2 font-semibold">Chess</p>
               <p className="text-white text-sm mt-1">
@@ -87,7 +105,15 @@ function About() {
             </div>
 
             {/* Checkers */}
-            <div className="p-4 bg-gray-900/70 border border-gray-700 rounded-lg shadow-md hover:scale-105 transition-transform">
+            <div 
+              className={`p-4 bg-gray-900/70 border rounded-lg shadow-md transition-all duration-300 cursor-pointer ${
+                hoveredGame === 'checkers' 
+                  ? 'border-orange-700 scale-105 shadow-orange-700/30' 
+                  : 'border-gray-700 hover:border-orange-700/50'
+              }`}
+              onMouseEnter={() => setHoveredGame('checkers')}
+              onMouseLeave={() => setHoveredGame(null)}
+            >
               <span className="text-4xl">⭕</span>
               <p className="text-orange-700 mt-2 font-semibold">Checkers</p>
               <p className="text-white text-sm mt-1">
@@ -100,7 +126,7 @@ function About() {
         {/* Resume Button */}
         <div className="flex justify-start">
           <a href="/resume.pdf" download>
-            <Button className="bg-blue-500 hover:bg-blue-600 text-white flex items-center gap-2 transition-all duration-300">
+            <Button className="bg-blue-500 hover:bg-blue-600 text-white flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105">
               <FileDown size={16} />
               Download My Resume
             </Button>

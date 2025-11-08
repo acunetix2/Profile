@@ -6,7 +6,7 @@ const projects = [
     tools: ["Python", "Pillow", "ExifTool", "Tkinter"],
     github: "https://github.com/acunetix2/Neuroscan",
     demo: "https://neuroscanpro.vercel.app",
-    image: "/assets/neuroscan.png", 
+    image: "/images/neuroscan.png", 
   },
   {
     title: "Sysmonitor - CLI System Monitoring Tool",

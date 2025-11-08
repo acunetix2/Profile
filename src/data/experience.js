@@ -27,15 +27,15 @@ const education = [
   },
   {
     school: "Jomo Kenyatta University of Agriculture and Technology",
-    degree: "Bachelor’s in Information Technology",
-    year: "Ongoing",
+    degree: "Bachelors Degree in Information Technology",
+    year: "2023 - 2027",
   },
 ];
 
 const certifications = [
-  { title: "HCIA Datacom", issuer: "Huawei Technologies" },
-  { title: "Introduction to Cybersecurity", issuer: "Cisco" },
-  { title: "Red Hat System Administration", issuer: "Red Hat" },
+  { title: "HCIA Datacom", issuer: "Huawei Technologies", image: "/images/huawei.png" },
+  { title: "Introduction to Cybersecurity", issuer: "Cisco Networking Academy", image: "/images/cisco.png"},
+  { title: "Red Hat System Administration", issuer: "Red Hat" , image: "/images/redhat.png"},
 ];
 
 const training = [
