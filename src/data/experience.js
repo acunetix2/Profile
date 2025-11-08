@@ -48,7 +48,7 @@ const training = [
 
 const awards = [
   { title: "TryHackMe Top 2%", link: "https://tryhackme.com/p/Phantomjac007" },
-  { title: "Learn-A-Thon", issuer: "Cisco" },
+  { title: "Learn-A-Thon", issuer: "Cisco Systems " },
 ];
 
 export { experience, education, certifications, training, awards };
