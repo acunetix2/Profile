@@ -32,7 +32,7 @@ const projects = [
 	github: "https://github.com/acunetix2/devtaskmanager",
 	demo: "https://activa-blond.vercel.app",
 	image: "/images/taskboard.png",
-	},
+	}
 ];
 
 export default projects;
