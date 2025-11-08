@@ -26,13 +26,14 @@ const projects = [
     demo: "https://activa-blond.vercel.app", 
     image: "/images/taskboard.png", 
   },
-	title: "Verve Blog Hub",
-	description: "My personal blog hub for sharing insights in cybersecurity, programming, and technology. Designed to inspire, educate, and empower tech enthusiasts through practical write-ups and hands-on guides.",
-	tools: ["React", "TailwindCSS", "Node.js", "MongoDB"],
-	github: "https://github.com/acunetix2/devtaskmanager",
-	demo: "https://activa-blond.vercel.app",
-	image: "/images/taskboard.png",
-	}
+  {
+    title: "Verve Blog Hub",
+    description: "My personal blog hub for sharing insights in cybersecurity, programming, and technology. Designed to inspire, educate, and empower tech enthusiasts through practical write-ups and hands-on guides.",
+    tools: ["React", "TailwindCSS", "Node.js", "MongoDB"],
+    github: "https://github.com/acunetix2/devtaskmanager",
+    demo: "https://activa-blond.vercel.app",
+    image: "/images/taskboard.png",
+  }
 ];
 
 export default projects;
